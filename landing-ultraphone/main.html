@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UltraPhone Xperience</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>UltraPhone Xperience</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio">
+        <h2>La tecnología más exclusiva en tus manos</h2>
+        <p>Descubrí los últimos lanzamientos en smartphones premium.</p>
+        <a href="#productos" class="btn">Ver productos</a>
+      </section>
+
+      <section id="productos">
+        <h2>Nuestros Productos Estrella</h2>
+
+        <div class="producto">
+          <img src="imagenes/img1.jpeg" alt="Producto destacado 1" />
+          <h3>UltraPhone Z1</h3>
+          <p>Rendimiento superior y diseño elegante en la palma de tu mano.</p>
+          <span>$320.000</span>
+          <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="producto">
+          <img src="imagenes/img2.jpeg" alt="Producto destacado 2" />
+          <h3>UltraPhone Edge Pro</h3>
+          <p>Cámara de nivel profesional y batería para todo el día.</p>
+          <span>$410.000</span>
+          <a href="#" class="btn">Comprar</a>
+        </div>
+      </section>
+
+      <section id="ofertas">
+        <h2>Simulá tu descuento</h2>
+        <label for="precio-base">Precio original ($):</label>
+        <input type="number" id="precio-base" placeholder="Ej: 150000" />
+
+        <label for="porcentaje-descuento">Descuento (%):</label>
+        <input type="number" id="porcentaje-descuento" placeholder="Ej: 15" />
+
+        <button type="button" id="calcular-descuento">Calcular</button>
+        <p id="resultado-descuento"></p>
+      </section>
+
+      <section id="contacto">
+        <h2>Contactanos</h2>
+        <form id="formulario-contacto" action="procesamiento.php" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="asunto">Asunto:</label>
+          <select name="asunto" id="asunto" required>
+            <option value="">Seleccionar...</option>
+            <option value="Consulta general">Consulta general</option>
+            <option value="Precios y stock">Precios y stock</option>
+            <option value="Postventa">Postventa</option>
+          </select>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <div id="mensaje-final"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 UltraPhone Xperience - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="codigo.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

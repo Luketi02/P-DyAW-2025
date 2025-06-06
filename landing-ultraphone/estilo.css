@@ -1,0 +1,165 @@
+/* Tipografía base */
+body {
+            font-family: 'Gabriela', serif;
+            background-color: #f9f6fc;
+            color: #2c2c2c;
+            margin: 0;
+            padding: 0;
+}
+
+/* Estructura general */
+header,
+nav,
+main,
+section,
+footer {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+}
+
+/* Encabezado */
+header {
+            background-color: #a78bfa;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 4px solid #7c3aed;
+            position: sticky;
+            /* sticky para que quede fijo al hacer scroll */
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+            background-color: #7c3aed;
+            /* cambia color cuando se hace scroll */
+}
+
+/* Título */
+header h1 {
+            margin: 0;
+            font-size: 2.5em;
+}
+
+/* Menú de navegación */
+nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+}
+
+nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+            background-color: #bfaefc;
+}
+
+nav a:hover {
+            background-color: #7c3aed;
+}
+
+/* Secciones */
+section {
+            margin: 40px 0;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(167, 139, 250, 0.1);
+}
+
+section h2 {
+            color: #7c3aed;
+}
+
+/* Botón principal */
+.btn {
+            display: inline-block;
+            background-color: #a78bfa;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 20px;
+            transition: background 0.3s;
+}
+
+.btn:hover {
+            background-color: #7c3aed;
+}
+
+/* Formulario */
+form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+}
+
+input,
+select,
+textarea,
+button {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+            outline: 2px solid #a78bfa;
+}
+
+button {
+            background-color: #4ade80;
+            color: #2c2c2c;
+            font-weight: bold;
+            cursor: pointer;
+}
+
+button:hover {
+            background-color: #22c55e;
+}
+
+/* Footer */
+footer {
+            text-align: center;
+            background-color: #a78bfa;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 4px solid #7c3aed;
+}
+
+/* Descuento */
+#resultado-descuento {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #7c3aed;
+            margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+            nav ul {
+                        flex-direction: column;
+                        align-items: center;
+            }
+
+            section {
+                        padding: 20px;
+            }
+
+            header h1 {
+                        font-size: 2em;
+            }
+}
